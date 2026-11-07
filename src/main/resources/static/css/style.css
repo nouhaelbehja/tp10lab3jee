@@ -1,0 +1,36 @@
+:root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #182b42; background: #f1f5fa; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header { background: #fff; padding: 18px 4%; display: flex; align-items: center; gap: 26px; flex-wrap: wrap; border-bottom: 1px solid #dce5ef; }
+a { color: #175cad; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.brand { font-size: 21px; font-weight: 800; }
+nav { display: flex; gap: 20px; flex: 1; flex-wrap: wrap; }
+.container { max-width: 1120px; margin: 48px auto; padding: 0 24px; }
+h1 { font-size: clamp(26px, 4vw, 38px); line-height: 1.2; }
+h2 { font-size: 21px; }
+p { line-height: 1.7; }
+.muted { color: #53677d; }
+.badge { display: inline-block; background: #e1edff; color: #174c90; border-radius: 20px; padding: 6px 13px; font-size: 13px; font-weight: 700; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 30px; }
+.card, .login-card { background: #fff; border: 1px solid #dce5ef; border-radius: 16px; padding: 28px; box-shadow: 0 8px 30px #182b4208; }
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: linear-gradient(135deg, #e4edfc, #f7fafc); }
+.login-card { width: 100%; max-width: 460px; }
+label { display: block; margin: 18px 0 7px; font-weight: 600; }
+input { width: 100%; border: 1px solid #a9b9cc; padding: 12px; border-radius: 8px; font: inherit; }
+button, .button { display: inline-block; background: #175cad; color: white; padding: 11px 17px; border: 0; border-radius: 8px; font: inherit; cursor: pointer; }
+.login-card button { width: 100%; margin-top: 24px; }
+button:hover, .button:hover { background: #104780; text-decoration: none; }
+.secondary { background: #e8eef7; color: #183b68; }
+.secondary:hover { background: #d7e3f2; }
+:focus-visible { outline: 3px solid #db8a16; outline-offset: 3px; }
+.alert { padding: 12px; border-radius: 8px; }
+.error { color: #912b2b; background: #fdeaea; }
+.success { color: #196240; background: #e5f6ed; }
+dl { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr; gap: 15px; }
+dt { color: #53677d; } dd { margin: 0; overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 15px 12px; border-bottom: 1px solid #dce5ef; }
+th { background: #f1f5fa; }
+@media (max-width: 600px) { header { gap: 16px; } nav { flex-basis: 100%; } dl { grid-template-columns: 1fr; gap: 8px; } dd { margin-bottom: 12px; } }

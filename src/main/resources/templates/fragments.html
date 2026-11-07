@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<body>
+<header th:fragment="navigation">
+    <a class="brand" th:href="@{/home}">Campus Secure</a>
+    <nav aria-label="Navigation principale">
+        <a th:href="@{/home}">Accueil</a>
+        <a th:href="@{/user/dashboard}">Espace utilisateur</a>
+        <a th:href="@{/user/profile}">Mon profil</a>
+        <a th:if="${isAdmin}" th:href="@{/admin/dashboard}">Administration</a>
+    </nav>
+    <form th:action="@{/logout}" method="post"><button class="secondary" type="submit">Déconnexion</button></form>
+</header>
+</body>
+</html>

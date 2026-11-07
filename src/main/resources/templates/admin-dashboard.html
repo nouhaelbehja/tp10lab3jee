@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Administration · Campus Secure</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><header th:replace="~{fragments :: navigation}"></header>
+<main class="container"><span class="badge">Rôle ADMIN</span><h1>Espace administrateur</h1>
+    <section class="card"><h2>Profils des comptes de démonstration</h2>
+        <div class="table-scroll"><table><thead><tr><th>Identifiant</th><th>Nom</th><th>E-mail</th><th>Filière / service</th><th>Matricule</th></tr></thead>
+            <tbody><tr th:each="entry : ${profiles}"><td th:text="${entry.key}"></td><td th:text="${entry.value.name}"></td><td th:text="${entry.value.email}"></td><td th:text="${entry.value.department}"></td><td th:text="${entry.value.studentNumber}"></td></tr></tbody>
+        </table></div>
+    </section>
+</main></body></html>

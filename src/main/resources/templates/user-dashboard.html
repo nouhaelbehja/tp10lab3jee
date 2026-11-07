@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Espace utilisateur · Campus Secure</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body><header th:replace="~{fragments :: navigation}"></header>
+<main class="container"><span class="badge">Espace utilisateur</span><h1>Mon tableau de bord</h1>
+    <section class="card"><h2 th:text="${profile.name}">Nom</h2>
+        <dl><dt>Identifiant</dt><dd th:text="${username}"></dd><dt>Rôle</dt><dd th:text="${isAdmin ? 'ADMIN' : 'USER'}"></dd><dt>Filière / service</dt><dd th:text="${profile.department}"></dd></dl>
+        <a class="button" th:href="@{/user/profile}">Voir tous mes champs de profil</a>
+    </section>
+</main></body></html>

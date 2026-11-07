@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Accueil · Campus Secure</title><link rel="stylesheet" th:href="@{/css/style.css}"></head>
+<body>
+<header th:replace="~{fragments :: navigation}"></header>
+<main class="container">
+    <span class="badge">Connexion réussie</span>
+    <h1>Bienvenue, <span th:text="${profile.name}">Utilisateur</span></h1>
+    <p class="muted">Retrouvez vos informations universitaires dans votre espace sécurisé.</p>
+    <div class="cards">
+        <article class="card"><h2>Mon espace</h2><p>Consultez votre identité et votre rôle.</p><a class="button" th:href="@{/user/dashboard}">Ouvrir mon espace</a></article>
+        <article class="card"><h2>Mon profil</h2><p>Nom, e-mail, filière et numéro étudiant.</p><a class="button" th:href="@{/user/profile}">Consulter mon profil</a></article>
+        <article class="card" th:if="${isAdmin}"><h2>Administration</h2><p>Consultez les profils des comptes de démonstration.</p><a class="button" th:href="@{/admin/dashboard}">Ouvrir l’administration</a></article>
+    </div>
+</main>
+</body></html>

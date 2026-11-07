@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connexion · Campus Secure</title><link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="login-page">
+<main class="login-card">
+    <span class="badge">Campus Secure</span>
+    <h1>Votre espace universitaire</h1>
+    <p class="muted">Connectez-vous pour consulter votre profil et votre espace personnel.</p>
+    <p th:if="${param.error}" class="alert error" role="alert">Identifiants incorrects, veuillez réessayer.</p>
+    <p th:if="${param.logout}" class="alert success" role="status">Vous êtes déconnecté avec succès.</p>
+    <form th:action="@{/authenticate}" method="post">
+        <label for="username">Nom d’utilisateur</label>
+        <input id="username" name="username" autocomplete="username" placeholder="Votre identifiant" required autofocus>
+        <label for="password">Mot de passe</label>
+        <input id="password" type="password" name="password" autocomplete="current-password" placeholder="Votre mot de passe" required>
+        <button type="submit">Se connecter</button>
+    </form>
+</main>
+</body>
+</html>
